@@ -1,68 +1,30 @@
 ---
 import { Code } from 'astro:components';
 
-const code = `interface Developer {
-    name: string;
-    skills: string[];
-    interests: string[];
-};
-
-interface TechStack {
-    devOps: string[];
-    backend: string[];
-   frontend: string[];
-};
-
-type ContactType = 'github' | 'twitter' | 'linkedIn' | 'xing' | 'email';
+const code = `type ContactType = 'github' | 'linkedIn' | 'email';
 
 const techStack: TechStack = {
-    devOps: [
-        'GitLab',
-        'GitHub',
-        'Cloudflare',
-        'Docker'
-    ],
-    frontend: [
-        'Angular',
+    main: [
+        'HTML5',
+        'CSS3',
         'JavaScript',
-        'TypeScript',
+        'React',
+        'Bulma',
         'TailwindCSS',
-        'PrimeNG',
+        'BootStrap5',
+        'MDX',
         'Astro',
-        'Ionic',
-        'Stencil',
-        'Capacitor',
         'SCSS',
-        'Markdown',
-        'WordPress'
+        'WordPress',
+        'Webflow',
+        'Bulma'
     ],
-    backend: [
-        'Supabase',
-        'Node.js',
-        'Bun',
-        'Deno',
-        'PostgreSQL',
+    others: [
         'MySQL',
-        'S3 Storage',
-        'Resend'
-    ]
-};
-
-// Developer profile
-const me: Developer = {
-    name: 'Dejan Vi.',
-    skills: [
-        ...techStack.devOps,
-        ...techStack.backend,
-        ...techStack.frontend
-    ],
-    interests: [
-        'Open Source',
-        'Security',
-        'Privacy',
-        'Performance',
-        'Self-Hosting',
-        'Networking'
+        'Git',
+        'GitHub',
+        'Markdown',
+        'Figma'
     ]
 };
 
@@ -70,17 +32,11 @@ const me: Developer = {
 const contact = (type: ContactType): string => {
     switch (type) {
         case 'github':
-            return 'https://github.com/devidevio';
-        case 'twitter':
-            return 'https://x.com/devidev_io';
+            return 'https://github.com/aigle-levant';
         case 'linkedIn':
-            return 'https://www.linkedin.com/in/dejan-vi';
-        case 'xing':
-            return 'https://www.xing.com/profile/Dejan_Vintonjiv';
+            return 'https://www.linkedin.com/in/prajanya-subramanian/';
         case 'email':
-            return 'hi@devidev.io';
-        default:
-            return 'Send fax.';
+            return 'officialprajanya@gmail.com';
     }
 };
 
